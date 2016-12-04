@@ -122,7 +122,7 @@ impl Allocator {
     }
 
     /// Allocate a new entity
-    fn allocate_atomic(&self) -> Entity {
+    pub fn allocate_atomic(&self) -> Entity {
         let idx = self.start_from.load(Ordering::Relaxed);
         for i in idx.. {
             if !self.alive.contains(i as Index) && !self.raised.add_atomic(i as Index) {
