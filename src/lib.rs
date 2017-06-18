@@ -189,7 +189,7 @@ pub use shred::{AsyncDispatcher, Dispatcher, DispatcherBuilder, Fetch, FetchId, 
 pub use storage::{BTreeStorage, CheckStorage, DenseVecStorage, DistinctStorage, FlaggedStorage,
                   HashMapStorage, InsertResult, NullStorage, ReadStorage, Storage,
                   UnprotectedStorage, VecStorage, WriteStorage};
-pub use world::{Component, CreateIter, CreateIterAtomic, EntitiesRes, Entity, EntityBuilder,
+pub use world::{Allocator, Component, CreateIter, CreateIterAtomic, EntitiesRes, Entity, EntityBuilder,
                 Generation, World};
 
 #[cfg(feature = "serialize")]
